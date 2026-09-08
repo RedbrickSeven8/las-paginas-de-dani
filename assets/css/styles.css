@@ -1,4 +1,7 @@
-/* Las Páginas de Dani - Custom Design System & Animation Styles */
+/* ==========================================================================
+   Las Páginas de Dani - Design System & High-Performance Animation Styles
+   ========================================================================== */
+
 :root {
   --color-primary: #000412;
   --color-primary-container: #0f1e36;
@@ -14,78 +17,112 @@
   --color-surface-container-high: #dce9ff;
   --color-on-surface: #0b1c30;
   --color-on-surface-variant: #44474d;
+
+  /* Performance & Animation Timings (Spring curve inspired) */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Base resets & Rendering Performance */
 html {
   scroll-behavior: smooth;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--color-on-surface);
   background-color: var(--color-surface);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  letter-spacing: -0.015em;
 }
 
-/* Custom Interactive Animations & Micro-Interactions */
+img {
+  content-visibility: auto;
+}
+
+/* ==========================================================================
+   Micro-Interactions & Hover Physics (GPU Composited: Transforms & Opacity)
+   ========================================================================== */
+
 .btn-primary-action {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, box-shadow;
+  position: relative;
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s var(--ease-spring), background-color 0.2s ease;
+  will-change: transform;
 }
 .btn-primary-action:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(255, 107, 0, 0.4);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 24px -6px rgba(255, 107, 0, 0.4);
 }
 .btn-primary-action:active {
-  transform: translateY(1px);
+  transform: translateY(1px) scale(0.98);
 }
 
 .btn-whatsapp-action {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, box-shadow;
+  position: relative;
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s var(--ease-spring), background-color 0.2s ease;
+  will-change: transform;
 }
 .btn-whatsapp-action:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 24px -6px rgba(37, 211, 102, 0.45);
 }
 .btn-whatsapp-action:active {
-  transform: translateY(1px);
+  transform: translateY(1px) scale(0.98);
 }
 
 .card-hover-effect {
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
-  will-change: transform, box-shadow;
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s var(--ease-spring), border-color 0.25s ease;
+  will-change: transform;
 }
 .card-hover-effect:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 30px -10px rgba(11, 25, 44, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px -10px rgba(11, 25, 44, 0.12);
 }
 
-/* Scroll Entrance Animations via IntersectionObserver */
+/* Interactive Pricing Card Highlight */
+.pricing-card-featured {
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s var(--ease-spring);
+}
+.pricing-card-featured:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 25px 40px -12px rgba(255, 107, 0, 0.25);
+}
+
+/* ==========================================================================
+   Scroll-Driven Entrance Animations (IntersectionObserver Controlled)
+   ========================================================================== */
+
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(24px) scale(0.98);
+  transition: opacity 0.65s var(--ease-spring), transform 0.65s var(--ease-spring);
   will-change: opacity, transform;
 }
 
 .reveal-on-scroll.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
-.reveal-delay-1 { transition-delay: 100ms; }
-.reveal-delay-2 { transition-delay: 200ms; }
-.reveal-delay-3 { transition-delay: 300ms; }
-.reveal-delay-4 { transition-delay: 400ms; }
+/* Stagger Delays */
+.reveal-delay-1 { transition-delay: 80ms; }
+.reveal-delay-2 { transition-delay: 160ms; }
+.reveal-delay-3 { transition-delay: 240ms; }
+.reveal-delay-4 { transition-delay: 320ms; }
 
-/* Floating WhatsApp Button Pulse */
+/* ==========================================================================
+   Subtle Ambient & Glow Keyframes
+   ========================================================================== */
+
 @keyframes pulse-glow {
   0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
   }
   100% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
@@ -93,10 +130,33 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .floating-whatsapp {
-  animation: pulse-glow 2.5s infinite;
+  animation: pulse-glow 3s infinite var(--ease-soft);
+  will-change: transform, box-shadow;
 }
 
-/* Accessibility: respect user prefers-reduced-motion */
+/* Floating animation for badge pills */
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float-subtle 4s ease-in-out infinite;
+}
+
+/* Back to top button transitions */
+#scrollToTopBtn {
+  will-change: transform, opacity;
+}
+
+/* ==========================================================================
+   Accessibility & Mobile Battery Optimization (prefers-reduced-motion)
+   ========================================================================== */
+
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
@@ -107,5 +167,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   .reveal-on-scroll {
     opacity: 1 !important;
     transform: none !important;
+    transition: none !important;
+  }
+  .floating-whatsapp {
+    animation: none !important;
   }
 }

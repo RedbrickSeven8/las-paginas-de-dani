@@ -1,6 +1,6 @@
 /**
- * Las Páginas de Dani - UI, Scroll & Google Sheets Integration Controller
- * Separation of Concerns: Modular frontend logic
+ * Las Páginas de Dani - Ultra Optimized UI, Animation & Webhook Controller
+ * Separation of Concerns & Mobile/Desktop Adaptive Performance
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollToTop();
 });
 
-// 1. Lazy Scroll Entrance Animations with IntersectionObserver
+// 1. Adaptive High-Performance Scroll Entrance Animations
 function initScrollAnimations() {
   const animatedElements = document.querySelectorAll(
     'section > div, .grid > div, .card-hover-effect, #inicio .lg\\:col-span-7, #inicio .lg\\:col-span-5'
   );
 
-  animatedElements.forEach((el, index) => {
+  animatedElements.forEach((el) => {
     el.classList.add('reveal-on-scroll');
     const siblingIndex = Array.from(el.parentElement ? el.parentElement.children : []).indexOf(el);
     if (siblingIndex === 1) el.classList.add('reveal-delay-1');
@@ -25,23 +25,34 @@ function initScrollAnimations() {
     else if (siblingIndex >= 3) el.classList.add('reveal-delay-3');
   });
 
+  if (!('IntersectionObserver' in window)) {
+    // Fallback for older browsers
+    animatedElements.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  // Adjust rootMargin dynamically for fast mobile scrolling
+  const isMobile = window.innerWidth <= 768;
+  const rootMargin = isMobile ? '0px 0px -20px 0px' : '0px 0px -60px 0px';
+  const threshold = isMobile ? 0.05 : 0.12;
+
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        obs.unobserve(entry.target);
+        obs.unobserve(entry.target); // Unobserve immediately to free memory and CPU
       }
     });
   }, {
     root: null,
-    rootMargin: '0px 0px -50px 0px',
-    threshold: 0.1
+    rootMargin: rootMargin,
+    threshold: threshold
   });
 
-  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+  animatedElements.forEach(el => observer.observe(el));
 }
 
-// 2. Mobile Menu toggle
+// 2. Mobile Menu toggle with smooth ARIA handling
 function initMobileMenu() {
   const mobileToggleBtn = document.getElementById('mobileMenuToggle');
   const mobileMenu = document.getElementById('mobileMenuDropdown');
@@ -62,13 +73,14 @@ function initMobileMenu() {
   }
 }
 
-// 3. FAQ Accordion handler
+// 3. Smooth FAQ Accordion handler with micro-transitions
 function initFaqAccordion() {
   window.toggleFaq = function(button) {
     const answer = button.nextElementSibling;
     const icon = button.querySelector('.material-symbols-outlined');
     const isHidden = answer.classList.contains('hidden');
 
+    // Close other FAQ items smoothly
     document.querySelectorAll('#faq .faq-answer').forEach(el => {
       if (el !== answer) {
         el.classList.add('hidden');
@@ -88,18 +100,26 @@ function initFaqAccordion() {
   };
 }
 
-// 4. Scroll To Top Button (Bottom-Left)
+// 4. Scroll To Top Button with Throttled RAF Scroll Listener
 function initScrollToTop() {
   const btn = document.getElementById('scrollToTopBtn');
   if (!btn) return;
 
+  let ticking = false;
+
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      btn.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
-      btn.classList.add('opacity-100', 'translate-y-0');
-    } else {
-      btn.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
-      btn.classList.remove('opacity-100', 'translate-y-0');
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 350) {
+          btn.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
+          btn.classList.add('opacity-100', 'translate-y-0');
+        } else {
+          btn.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
+          btn.classList.remove('opacity-100', 'translate-y-0');
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   }, { passive: true });
 
@@ -108,8 +128,7 @@ function initScrollToTop() {
   });
 }
 
-// 5. Plan Selection & Lead Submission (WhatsApp + Google Sheet webhook connector)
-// Webhook endpoint de Google Apps Script (Reemplazar con tu URL generada tras el despliegue)
+// 5. Plan Selection & Google Sheets Lead Submission Controller
 const GOOGLE_SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzGpZjGr9B1gjYzRKXnBF5jfua7Pe0gmZxBzav-4vjwYx1JOs7272FqTwKVCWoFvfqM/exec';
 
 function initSmoothScroll() {
@@ -124,7 +143,7 @@ function initSmoothScroll() {
     }
     const nameInput = document.getElementById('clientName');
     if (nameInput) {
-      setTimeout(() => nameInput.focus(), 600);
+      setTimeout(() => nameInput.focus(), 500);
     }
   };
 
@@ -135,35 +154,41 @@ function initSmoothScroll() {
     const negocio = document.getElementById('businessName')?.value.trim() || '';
     const plan = document.getElementById('planSelected')?.value || '';
 
-    // Enviar a Google Sheets de forma asíncrona si hay Webhook configurado
-    if (GOOGLE_SHEETS_WEBHOOK_URL) {
-      const payload = {
-        nombre: nombre,
-        whatsapp: telefono,
-        negocio: negocio,
-        plan: plan,
-        fecha: new Date().toISOString()
-      };
+    const payload = {
+      nombre: nombre,
+      whatsapp: telefono,
+      paginaWeb: 'Las Páginas de Dani',
+      negocio: negocio,
+      plan: plan
+    };
 
+    // Envío en segundo plano de alto rendimiento con navigator.sendBeacon o fetch
+    if (GOOGLE_SHEETS_WEBHOOK_URL) {
       try {
-        fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        }).catch(err => console.log('Sheet log:', err));
+        const blob = new Blob([JSON.stringify(payload)], { type: 'text/plain;charset=UTF-8' });
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(GOOGLE_SHEETS_WEBHOOK_URL, blob);
+        } else {
+          fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: JSON.stringify(payload)
+          }).catch(() => {});
+        }
       } catch (e) {
-        console.warn('Google sheet sync attempt:', e);
+        console.warn('Google Sheets sync:', e);
       }
     }
 
-    // Redirección inmediata a WhatsApp
+    // Redirección optimizada a WhatsApp
     const message = `Hola Dani, quiero empezar mi web.%0A%0A` +
       `*Nombre:* ${encodeURIComponent(nombre)}%0A` +
       `*Teléfono:* ${encodeURIComponent(telefono)}%0A` +
       `*Negocio:* ${encodeURIComponent(negocio)}%0A` +
       `*Plan:* ${encodeURIComponent(plan)}`;
 
-    window.open(`https://wa.me/573058921629?text=${message}`, '_blank');
+    setTimeout(() => {
+      window.open(`https://wa.me/573058921629?text=${message}`, '_blank');
+    }, 100);
   };
 }
