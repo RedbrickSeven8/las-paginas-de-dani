@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  
+  <!-- SEO Meta Tags Primarios -->
+  <title>Las Páginas de Dani - Tu Web en 24 Horas | Páginas Web Rápidas y Económicas en Colombia</title>
+  <meta name="title" content="Las Páginas de Dani - Tu Web en 24 Horas | Páginas Web Rápidas y Económicas en Colombia"/>
+  <meta name="description" content="Diseño y entrega de páginas web profesionales en 24 horas en Colombia. Landing pages, catálogos, menús interactivos y tarjetas físicas inteligentes NFC. Precios accesibles desde $550.000 COP sin dolores de cabeza."/>
+  <meta name="keywords" content="diseño de páginas web Colombia, páginas web 24 horas, landing pages rápidas, páginas web económicas Medellín Bogotá, tarjetas inteligentes NFC, menús interactivos QR, Las Páginas de Dani"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="Las Páginas de Dani"/>
+  <meta name="language" content="Spanish"/>
+  <meta name="theme-color" content="#0B192C"/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://las-paginas-de-dani.surge.sh/"/>
+  <meta property="og:title" content="Las Páginas de Dani - Tu Web en 24 Horas"/>
+  <meta property="og:description" content="Tu negocio en internet mañana mismo, sin enredos y a precio justo. Landing pages y webs interactivas en Colombia con tarjetas NFC incluidas."/>
+  <meta property="og:image" content="assets/images/logo.png"/>
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:url" content="https://las-paginas-de-dani.surge.sh/"/>
+  <meta property="twitter:title" content="Las Páginas de Dani - Tu Web en 24 Horas"/>
+  <meta property="twitter:description" content="Tu negocio en internet mañana mismo, sin enredos y a precio justo. Landing pages y webs interactivas en Colombia."/>
+  <meta property="twitter:image" content="assets/images/logo.png"/>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <link rel="apple-touch-icon" href="assets/images/logo.png"/>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Tailwind CSS via CDN with Stitch Brand Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-container": "#572000",
+            "on-tertiary-fixed": "#002109",
+            "secondary-fixed": "#ffdbcc",
+            "on-primary-fixed": "#0c1b33",
+            "background": "#f8f9ff",
+            "secondary-fixed-dim": "#ffb693",
+            "tertiary-fixed-dim": "#3de273",
+            "surface-container-low": "#eff4ff",
+            "on-tertiary-fixed-variant": "#005322",
+            "surface-pure": "#FFFFFF",
+            "surface-container-lowest": "#ffffff",
+            "primary-container": "#0f1e36",
+            "on-primary-container": "#7886a3",
+            "primary-fixed-dim": "#b8c7e6",
+            "surface": "#f8f9ff",
+            "primary": "#000412",
+            "on-secondary": "#ffffff",
+            "tertiary-container": "#00240b",
+            "surface-container-highest": "#d3e4fe",
+            "outline": "#75777e",
+            "on-secondary-fixed": "#351000",
+            "secondary-container": "#fe6b00",
+            "surface-container": "#e5eeff",
+            "electric-orange": "#FF6B00",
+            "on-surface-variant": "#44474d",
+            "surface-variant": "#d3e4fe",
+            "on-error-container": "#93000a",
+            "electric-orange-hover": "#E55A00",
+            "on-surface": "#0b1c30",
+            "outline-variant": "#c5c6ce",
+            "surface-light": "#F8FAFC",
+            "inverse-primary": "#b8c7e6",
+            "on-primary": "#ffffff",
+            "danger-red": "#EF4444",
+            "whatsapp-green": "#25D366",
+            "on-tertiary-container": "#009a46",
+            "on-primary-fixed-variant": "#394761",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "surface-tint": "#515f7a",
+            "surface-dim": "#cbdbf5",
+            "deep-navy": "#0B192C",
+            "error": "#ba1a1a",
+            "on-background": "#0b1c30",
+            "tertiary": "#000601",
+            "on-secondary-fixed-variant": "#7a3000",
+            "surface-bright": "#f8f9ff",
+            "inverse-surface": "#213145",
+            "surface-container-high": "#dce9ff",
+            "whatsapp-green-dark": "#1EBE5D",
+            "inverse-on-surface": "#eaf1ff",
+            "card-stroke": "#E2E8F0",
+            "primary-fixed": "#d7e3ff",
+            "secondary": "#a04100",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#66ff8e"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "space-md": "1rem",
+            "space-xs": "0.5rem",
+            "space-xxs": "0.25rem",
+            "space-xl": "2rem",
+            "space-3xl": "4rem",
+            "container-max": "1200px",
+            "space-lg": "1.5rem",
+            "space-2xl": "3rem",
+            "space-sm": "0.75rem",
+            "gutter": "1.25rem"
+          },
+          fontFamily: {
+            "headline-sm": ["Montserrat", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "headline-md": ["Montserrat", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "headline-lg": ["Montserrat", "sans-serif"],
+            "headline-xl-mobile": ["Montserrat", "sans-serif"],
+            "headline-xl": ["Montserrat", "sans-serif"],
+            "display-hero-mobile": ["Montserrat", "sans-serif"],
+            "price-xl": ["Montserrat", "sans-serif"],
+            "label-bold": ["Montserrat", "sans-serif"],
+            "display-hero": ["Montserrat", "sans-serif"],
+            "price-sm": ["Montserrat", "sans-serif"],
+            "body-default": ["Inter", "sans-serif"],
+            "body-lead": ["Inter", "sans-serif"]
+          },
+          fontSize: {
+            "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "700" }],
+            "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+            "headline-md": ["22px", { lineHeight: "28px", fontWeight: "700" }],
+            "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            "headline-lg": ["30px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "display-hero-mobile": ["36px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "price-xl": ["44px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }],
+            "label-bold": ["13px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "700" }],
+            "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "800" }],
+            "price-sm": ["20px", { lineHeight: "26px", fontWeight: "700" }],
+            "body-default": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "body-lead": ["18px", { lineHeight: "28px", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- External Custom Modular CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+
+  <!-- JSON-LD Structured Data Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Las Páginas de Dani",
+    "image": "https://las-paginas-de-dani.surge.sh/assets/images/logo.png",
+    "description": "Servicio de diseño y entrega rápida de páginas web profesionales en 24 horas en Colombia con mantenimiento y tarjetas inteligentes NFC.",
+    "telephone": "+573058921629",
+    "priceRange": "$550.000 COP - $1.250.000 COP",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CO"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Plan Básica",
+        "price": "550000",
+        "priceCurrency": "COP",
+        "description": "Landing page informativa entregada en 24 horas."
+      },
+      {
+        "@type": "Offer",
+        "name": "Plan Animada",
+        "price": "750000",
+        "priceCurrency": "COP",
+        "description": "Landing page animada con micro-interacciones y botón WhatsApp."
+      },
+      {
+        "@type": "Offer",
+        "name": "Plan Interactiva",
+        "price": "950000",
+        "priceCurrency": "COP",
+        "description": "Página web interactiva con menú o catálogo digital (hasta 50 productos)."
+      },
+      {
+        "@type": "Offer",
+        "name": "Plan Interactiva + Extras",
+        "price": "1250000",
+        "priceCurrency": "COP",
+        "description": "Web interactiva con catálogo y hasta 2 funcionalidades avanzadas como pedidos directos por WhatsApp."
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-electric-orange selection:text-white">
+
+  <header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-pure/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1200px] mx-auto px-space-md lg:px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Logo Las Páginas de Dani" class="h-8 sm:h-10 w-auto object-contain" decoding="async" loading="lazy" src="assets/images/logo.png"/><span class="font-headline-sm text-headline-sm text-deep-navy tracking-tight hidden sm:inline-block">Las páginas de Dani</span></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-lg"><a aria-current="page" class="px-space-xs py-space-xxs transition-colors bg-surface-container-high text-on-surface font-bold rounded-lg" data-path="landing-one-page" href="#inicio">Inicio</a><a class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="servicios" href="#servicios">Servicios</a><a class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="precios" href="#precios">Precios</a><a class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="portafolio" href="#portafolio">Portafolio</a><a class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="nosotros" href="#nosotros">Nosotros</a><a class="px-space-xs py-space-xxs text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="contacto" href="#contacto">Contacto</a></nav><div class="flex items-center gap-space-sm"><a class="inline-flex items-center gap-space-xxs bg-electric-orange hover:bg-electric-orange-hover text-on-primary px-space-md py-space-xs rounded-lg font-label-bold text-label-bold transition-all shadow-[0_2px_4px_rgba(15,30,54,0.04)] hover:translate-y-[-1px]" href="https://wa.me/573058921629?text=Hola%20Dani,%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20en%2024%20horas." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-5 h-5 fill-current shrink-0" viewbox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.9 11.9 0 0 0 5.86 1.52h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.44zm-8.46 17.85h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.92 9.92 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.49-4.46 9.94-9.98 9.94zm5.46-7.46c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.47-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.64-.93-2.24-.24-.59-.49-.51-.68-.52-.18-.01-.38-.01-.58-.01-.2 0-.53.08-.8.38-.28.3-1.06 1.04-1.06 2.53 0 1.5 1.09 2.94 1.24 3.14.15.2 2.15 3.28 5.2 4.6.73.31 1.3.5 1.74.64.73.23 1.39.2 1.92.12.59-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z"></path></svg><span class="hidden sm:inline">Cotizar</span><span class="sm:hidden">WhatsApp</span></a></div><button aria-expanded="false" aria-label="Abrir menú de navegación" class="md:hidden p-2 text-deep-navy hover:text-electric-orange transition-colors focus:outline-none" id="mobileMenuToggle"><span class="material-symbols-outlined text-[28px]">menu</span></button></div>
+<div class="hidden md:hidden bg-surface-pure border-t border-card-stroke px-space-md py-space-sm flex flex-col gap-space-sm shadow-xl" id="mobileMenuDropdown">
+<a class="font-headline-sm text-body-sm text-deep-navy hover:text-electric-orange py-1" href="#inicio">Inicio</a>
+<a class="font-headline-sm text-body-sm text-deep-navy hover:text-electric-orange py-1" href="#nosotros">Nosotros</a>
+<a class="font-headline-sm text-body-sm text-deep-navy hover:text-electric-orange py-1" href="#precios">Precios</a>
+<a class="font-headline-sm text-body-sm text-deep-navy hover:text-electric-orange py-1" href="#portafolio">Portafolio</a>
+<a class="font-headline-sm text-body-sm text-deep-navy hover:text-electric-orange py-1" href="#faq">Preguntas Frecuentes</a>
+<a class="font-headline-sm text-body-sm text-deep-navy hover:text-electric-orange py-1" href="#contacto-rapido">Contacto</a>
+<a class="inline-flex items-center justify-center gap-2 bg-whatsapp-green text-white font-label-bold py-2.5 rounded-xl mt-2 text-center" href="https://wa.me/573058921629?text=Hola%20Dani,%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20en%2024%20horas." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+    Cotizar por WhatsApp
+  </a>
+</div>
+</header>
+
+  <main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface py-space-2xl lg:py-space-3xl" id="inicio">
+<div class="max-w-[1200px] mx-auto px-space-md lg:px-space-xl">
+<!-- Fast Delivery Pill Banner -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Text & CTAs Left Column -->
+<div class="lg:col-span-7 flex flex-col items-start gap-space-md">
+<h1 class="font-display-hero text-display-hero text-deep-navy tracking-tight leading-[1.08]">
+            Tu negocio en internet <span class="text-electric-orange underline decoration-secondary-fixed-dim decoration-wavy decoration-2">mañana mismo</span>, sin enredos y a precio justo.
+          </h1>
+<p class="font-body-lead text-body-lead text-on-surface-variant max-w-xl">
+            ¿Necesitas una página web profesional pero no quieres gastar millones ni esperar semanas con agencias lentas? Yo te la entrego en 24 horas. Tú dedícate a vender, yo me encargo de que tu marca exista y facture en digital.
+          </p>
+<!-- Badges Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs w-full my-space-xs">
+<div class="p-space-xs rounded-xl bg-surface-container-low flex flex-col gap-1 shadow-sm">
+<span class="font-headline-sm text-headline-sm text-deep-navy flex items-center gap-1">
+<span class="material-symbols-outlined text-electric-orange text-[20px]">timer</span> 24h
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Entrega récord garantizada</span>
+</div>
+<div class="p-space-xs rounded-xl bg-surface-container-low flex flex-col gap-1 shadow-sm">
+<span class="font-headline-sm text-headline-sm text-deep-navy flex items-center gap-1">
+<span class="material-symbols-outlined text-whatsapp-green text-[20px]">payments</span> $550k
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Desde $550.000 COP</span>
+</div>
+<div class="p-space-xs rounded-xl bg-surface-container-low flex flex-col gap-1 shadow-sm">
+<span class="font-headline-sm text-headline-sm text-deep-navy flex items-center gap-1">
+<span class="material-symbols-outlined text-deep-navy text-[20px]">dns</span> 100%
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hosting y soporte listos</span>
+</div>
+<div class="p-space-xs rounded-xl bg-surface-container-low flex flex-col gap-1 shadow-sm">
+<span class="font-headline-sm text-headline-sm text-deep-navy flex items-center gap-1">
+<span class="text-[18px]">🇨🇴</span> Colombia
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Soporte local y WhatsApp</span>
+</div>
+</div>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-electric-orange hover:bg-electric-orange-hover text-on-primary font-label-bold text-label-bold px-space-xl py-space-md rounded-xl transition-all shadow-[0_4px_14px_rgba(255,107,0,0.3)] hover:-translate-y-0.5 text-center" href="https://wa.me/573058921629?text=Hola%20Dani,%20quiero%20empezar%20mi%20p%C3%A1gina%20web%20para%20tenerla%20lista%20en%2024%20horas." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[22px]">rocket_launch</span>
+<span class="">Solicitar mi web en 24h</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-surface-pure hover:bg-surface-container text-deep-navy font-label-bold text-label-bold px-space-lg py-space-md rounded-xl transition-all shadow-sm" href="#precios">
+<span class="material-symbols-outlined text-[20px]">view_timeline</span>
+<span class="">Ver planes y precios</span>
+</a>
+</div>
+<!-- Micro trust quote -->
+<div class="flex items-center gap-space-xs text-on-surface-variant pt-space-xxs">
+</div>
+</div>
+<!-- Visual Right Showcase -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-container-low p-space-xs">
+<div class="relative w-full h-[460px] rounded-xl overflow-hidden">
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/85 via-deep-navy/20 to-transparent flex flex-col justify-end p-space-lg text-white">
+<div class="inline-flex items-center gap-space-xs bg-white/20 backdrop-blur-md px-space-xs py-1 rounded-full w-fit mb-space-xs">
+<span class="material-symbols-outlined text-electric-orange text-[16px]">contactless</span>
+<span class="font-label-bold text-label-sm uppercase tracking-wider text-white">NFC + Menú / Reseñas Google</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Tu web en el celular del cliente con 1 solo toque.</h3>
+<p class="font-body-sm text-body-sm text-white/90 mt-1">Acerca el teléfono a la tarjeta inteligente y se abre tu menú digital, catálogo o formulario de Google Reviews.</p>
+</div>
+</div>
+<!-- Floating Speed badge -->
+<div class="absolute -top-4 -left-4 bg-surface-pure text-deep-navy p-space-sm rounded-xl shadow-lg flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-electric-orange/10 flex items-center justify-center text-electric-orange font-headline-sm">
+                ⚡
+              </div>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">Entrega: 24 Horas</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Con link activo y listo</p>
+</div>
+</div>
+<!-- Floating Price badge -->
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EL DIFERENCIADOR RADICAL -->
+<section class="w-full py-space-3xl bg-surface-container-low" id="nosotros">
+<div class="max-w-[1200px] mx-auto px-space-md lg:px-space-xl">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-electric-orange">Claridad Comercial Absoluta</span>
+<h2 class="font-headline-xl text-headline-xl text-deep-navy mt-space-xxs">¿Por qué es tan rápido y económico?</h2>
+<p class="font-body-lead text-body-lead text-on-surface-variant mt-space-xs">
+          Las agencias te cobran millones por reuniones interminables y meses de burocracia. Yo optimicé el proceso para negocios prácticos que necesitan vender ya.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Step 1 -->
+<div class="bg-surface-pure p-space-xl rounded-2xl shadow-sm flex flex-col gap-space-sm hover:-translate-y-1 transition-all">
+<div class="w-14 h-14 rounded-xl bg-electric-orange/10 text-electric-orange flex items-center justify-center font-headline-md">
+<span class="material-symbols-outlined text-[32px]">folder_zip</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">1. Obtención de información básica</h3>
+<p class="font-body-default text-body-default text-on-surface-variant">No tienes que enviar archivos ni enredarte. Con una sola visita a tu negocio recopilamos toda la información, fotos y detalles necesarios para dejar tu web lista.</p>
+<div class="mt-auto pt-space-xs flex items-center text-electric-orange font-label-bold text-label-sm">
+<span class="">En menos de 15 minutos queda cuadrado</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-pure p-space-xl rounded-2xl shadow-sm flex flex-col gap-space-sm hover:-translate-y-1 transition-all">
+<div class="w-14 h-14 rounded-xl bg-whatsapp-green/10 text-whatsapp-green-dark flex items-center justify-center font-headline-md">
+<span class="material-symbols-outlined text-[32px]">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">2. Construyo y publico en 24h</h3>
+<p class="font-body-default text-body-default text-on-surface-variant">
+            Sin código que descifrar ni paneles complicados de WordPress que se rompen. Se ensambla en una infraestructura ultra rápida y optimizada para celulares en Colombia.
+          </p>
+<div class="mt-auto pt-space-xs flex items-center text-whatsapp-green font-label-bold text-label-sm">
+<span class="">Servidores de carga instantánea</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-pure p-space-xl rounded-2xl shadow-sm flex flex-col gap-space-sm hover:-translate-y-1 transition-all">
+<div class="w-14 h-14 rounded-xl bg-deep-navy/10 text-deep-navy flex items-center justify-center font-headline-md">
+<span class="material-symbols-outlined text-[32px]">support_agent</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">3. Mantenimiento &amp; Cambios</h3>
+<p class="font-body-default text-body-default text-on-surface-variant">
+            ¿Cambiaste un precio, cambiaste de WhatsApp o sacaste una promoción? Me mandas un mensaje y yo lo actualizo. Tu página nunca queda obsoleta ni abandonada.
+          </p>
+<div class="mt-auto pt-space-xs flex items-center text-deep-navy font-label-bold text-label-sm">
+<span class="">Suscripción mensual económica</span>
+</div>
+</div>
+</div>
+<!-- Feature Bar NFC Banner -->
+<div class="mt-space-xl bg-deep-navy text-white rounded-2xl p-space-lg lg:p-space-xl flex flex-col lg:flex-row items-center justify-between gap-space-lg shadow-xl">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-electric-orange flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-[28px]">contactless</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-white">¿Tienes punto de venta o local físico en Colombia?</h4>
+<p class="font-body-default text-body-default text-surface-container-high mt-1 max-w-2xl">
+              Nuestros planes Interactivos incluyen tarjetas inteligentes NFC personalizadas. El cliente acerca su celular y salta tu catálogo o el enlace directo para dejar una reseña en Google Maps.
+            </p>
+</div>
+</div>
+<a class="shrink-0 bg-electric-orange hover:bg-electric-orange-hover text-on-primary font-label-bold text-label-bold px-space-lg py-space-sm rounded-xl transition-all shadow-md" href="https://wa.me/573058921629?text=Hola%20Dani,%20quiero%20informaci%C3%B3n%20sobre%20las%20tarjetas%20f%C3%ADsicas%20inteligentes%20NFC%20y%20c%C3%B3digo%20QR." rel="noopener noreferrer" target="_blank">
+          Preguntar por tarjetas NFC
+        </a>
+</div>
+</div>
+</section>
+<!-- SECCIÓN DE PRECIOS Y NIVELES (LOS 4 NIVELES) -->
+<section class="w-full py-space-3xl bg-surface" id="precios">
+<div class="max-w-[1200px] mx-auto px-space-md lg:px-space-xl">
+<!-- Section Title -->
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-electric-orange">Precios 100% Claros en Pesos Colombianos</span>
+<h2 class="font-headline-xl text-headline-xl text-deep-navy mt-space-xxs">Elige el plan exacto para tu modelo de negocio</h2>
+<p class="font-body-lead text-body-lead text-on-surface-variant mt-space-xs">
+          Sin costos ocultos ni facturas sorpresas. Pagas el valor inicial por la construcción y una mensualidad justa por soporte, hosting y cambios.
+        </p>
+</div>
+<!-- 4 Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md items-stretch">
+<!-- PLAN 1: BÁSICA -->
+<div class="bg-surface-pure rounded-2xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="inline-block px-space-xs py-1 rounded bg-surface-container text-deep-navy font-label-bold text-label-sm mb-space-xs">
+              PRESENCIA RÁPIDA
+            </div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Básica</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 min-h-[40px]">
+              Ideal para negocios de servicios, abogados, médicos o consultores.
+            </p>
+<div class="my-space-md pt-space-xs">
+<span class="font-price-xl text-price-xl text-deep-navy">$550k</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold"> COP inicial</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                + <span class="font-bold text-deep-navy">$55.000 COP</span> / mes
+              </p>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface py-space-sm">
+<li class="flex items-start gap-space-xxs">
+<span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span>
+<span class="">Landing page informativa limpia</span>
+</li>
+<li class="flex items-start gap-space-xxs">
+<span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span>
+<span class="">Entrega récord en 24 horas</span>
+</li>
+<li class="flex items-start gap-space-xxs">
+<span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span>
+<span class="">Dominio y hosting administrado</span>
+</li>
+<li class="flex items-start gap-space-xxs">
+<span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span>
+<span class="">Botón directo a WhatsApp</span>
+</li>
+<li class="flex items-start gap-space-xxs text-outline">
+<span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span>
+<span class="">Sin animaciones complejas</span>
+</li>
+<li class="flex items-start gap-space-xxs text-outline">
+<span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span>
+<span class="">Sin catálogo de productos</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md">
+<button class="w-full inline-flex items-center justify-center gap-space-xxs bg-surface-container-high hover:bg-surface-container-highest text-deep-navy font-label-bold text-label-bold py-space-sm rounded-xl transition-colors cursor-pointer" onclick="seleccionarPlan('Plan Básica ($550.000 COP)')" type="button">
+<span class="">Elegir Básica</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- PLAN 2: ANIMADA -->
+<div class="bg-surface-pure rounded-2xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="inline-block px-space-xs py-1 rounded bg-surface-container text-deep-navy font-label-bold text-label-sm mb-space-xs">
+              IMPACTO VISUAL
+            </div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Animada</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 min-h-[40px]">
+              Para marcas que quieren lucir modernas, tecnológicas y dinámicas.
+            </p>
+<div class="my-space-md pt-space-xs">
+<span class="font-price-xl text-price-xl text-deep-navy">$750k</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold"> COP inicial</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                + <span class="font-bold text-deep-navy">$75.000 COP</span> / mes
+              </p>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface py-space-sm"><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class="">Microinteracciones y animaciones suaves</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class="">Entrega récord en 24 horas</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class="">Optimización para dispositivos móviles</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class="">Hosting y soporte prioritario</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class=""><strong>1 Tarjeta física NFC</strong> (Reseñas de Google)</span></li><li class="flex items-start gap-space-xxs text-outline"><span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span><span class="">Sin catálogo de productos ni menús interactivos</span></li><li class="flex items-start gap-space-xxs text-outline"><span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span><span class="">Sin carrito ni pedidos automatizados</span></li><li class="flex items-start gap-space-xxs text-outline"><span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span><span class="">Sin pasarelas bancarias complejas</span></li></ul>
+</div>
+<div class="pt-space-md">
+<button class="w-full inline-flex items-center justify-center gap-space-xxs bg-surface-container-high hover:bg-surface-container-highest text-deep-navy font-label-bold text-label-bold py-space-sm rounded-xl transition-colors cursor-pointer" onclick="seleccionarPlan('Plan Animada ($750.000 COP)')" type="button">
+<span class="">Elegir Animada</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- PLAN 3: INTERACTIVA (MÁS POPULAR / RECOMENDADO) -->
+<div class="bg-surface-pure rounded-2xl p-space-lg shadow-xl relative flex flex-col justify-between hover:shadow-2xl transition-all -translate-y-2 bg-gradient-to-b from-surface-pure to-surface-container-high/20">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-electric-orange text-white text-label-sm font-label-bold px-space-md py-1 rounded-full uppercase tracking-wider shadow-md">
+            ★ El Más Popular
+          </div>
+<div>
+<div class="inline-block px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-sm mb-space-xs">
+              ALTA CONVERSIÓN
+            </div>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Interactiva</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 min-h-[40px]">
+              La preferida por restaurantes, cafés, ropa y tiendas con catálogo.
+            </p>
+<div class="my-space-md pt-space-xs">
+<span class="font-price-xl text-price-xl text-deep-navy">$950k</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold"> COP inicial</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                + <span class="font-bold text-electric-orange">$95.000 COP</span> / mes
+              </p>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface py-space-sm"><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class=""><strong>Catálogo o menú interactivo</strong> (hasta 50 ítems)</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class="">Filtros por categorías rápidas</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class="">Entrega récord en 24 horas</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class=""><strong>2 Tarjeta física NFC</strong> (Reseñas de Google o Menú)</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class="">Cambiar o añadir productos sin costo</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class="">Cambios de precios y fotos por WhatsApp</span></li><li class="flex items-start gap-space-xxs text-outline"><span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span><span class="">Sin carrito de compras ni checkout de pedidos</span></li><li class="flex items-start gap-space-xxs text-outline"><span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span><span class="">Sin bases de datos complejas ni registros de usuarios</span></li><li class="flex items-start gap-space-xxs text-outline"><span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span><span class="">No incluye ecommerce ni pagos online directos</span></li></ul>
+</div>
+<div class="pt-space-md">
+<button class="w-full inline-flex items-center justify-center gap-space-xxs bg-electric-orange hover:bg-electric-orange-hover text-on-primary font-label-bold text-label-bold py-space-sm rounded-xl transition-all shadow-[0_4px_12px_rgba(255,107,0,0.35)] cursor-pointer" onclick="seleccionarPlan('Plan Interactiva ($950.000 COP - Más Popular)')" type="button">
+<span class="">Pedir Interactiva</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+</div>
+<!-- PLAN 4: INTERACTIVA + EXTRA -->
+<div class="bg-deep-navy text-white rounded-2xl p-space-lg shadow-xl flex flex-col justify-between hover:shadow-2xl transition-all">
+<div>
+<div class="inline-block px-space-xs py-1 rounded bg-surface-container-low text-deep-navy font-label-bold text-label-sm mb-space-xs">
+              COMPLETO + EXTRAS
+            </div>
+<h3 class="font-headline-md text-headline-md text-white">Interactiva + Extra</h3>
+<p class="font-body-sm text-body-sm text-surface-container-high mt-1 min-h-[40px]">
+              Máxima potencia comercial con checkout de pedidos directo al WhatsApp.
+            </p>
+<div class="my-space-md pt-space-xs">
+<span class="font-price-xl text-price-xl text-white">$1.25M</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold"> COP inicial</span>
+<p class="font-body-sm text-body-sm text-surface-container-high mt-1">
+                + <span class="font-bold text-white">$125.000 COP</span> / mes
+              </p>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-container py-space-sm"><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class=""><strong>Todo lo del plan Interactiva</strong></span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class="">1 Funcionalidades extra (ej: cálculo o carrito a whatsapp, whatsapp personalizado)</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class=""><strong>3 Tarjetas Físicas NFC</strong> configuradas</span></li><li class="flex items-start gap-space-xxs"><span class="material-symbols-outlined text-whatsapp-green text-[18px] shrink-0">check_circle</span><span class="">Prioridad 1 en soporte técnico</span></li><li class="flex items-start gap-space-xxs text-surface-container-highest/60"><span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span><span class="">Sin pasarelas bancarias complejas ni pagos con tarjeta en la web (solo pagos directos a tu WhatsApp)</span></li><li class="flex items-start gap-space-xxs text-surface-container-highest/60"><span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span><span class="">Sin registros de usuarios ni sistemas de login con contraseña</span></li><li class="flex items-start gap-space-xxs text-surface-container-highest/60"><span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span><span class="">Máximo 50 productos en catálogo (no tiendas masivas estilo MercadoLibre)</span></li><li class="flex items-start gap-space-xxs text-surface-container-highest/60"><span class="material-symbols-outlined text-danger-red text-[18px] shrink-0">cancel</span><span class="">Sin bases de datos de usuarios masivas</span></li></ul>
+</div>
+<div class="pt-space-md">
+<button class="w-full inline-flex items-center justify-center gap-space-xxs bg-surface-pure hover:bg-surface-container text-deep-navy font-label-bold text-label-bold py-space-sm rounded-xl transition-colors cursor-pointer" onclick="seleccionarPlan('Plan Interactiva + Extras ($1\'250.000 COP)')" type="button">
+<span class="">Elegir Plan Pro</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cuadro de Claridad y Transparencia: LO QUE NO HACEMOS -->
+<div class="mt-space-xl p-space-md lg:px-space-lg rounded-2xl bg-surface-pure border border-card-stroke shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md"><div class="flex items-start sm:items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-electric-orange/10 text-electric-orange flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[24px]">contactless</span></div><div><p class="font-headline-sm text-headline-sm text-deep-navy flex items-center gap-space-xxs">¿Necesitas más tarjetas físicas NFC?<span class="inline-flex items-center px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-sm">Opcional</span></p><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">El número de tarjetas adicionales se acordará previamente con un costo extra accesible según el plan que elijas (ideales para múltiples mesas, puntos de atención o personal de tu negocio).</p></div></div><a class="shrink-0 inline-flex items-center gap-space-xxs text-electric-orange hover:text-electric-orange-hover font-label-bold text-label-bold transition-colors" href="https://wa.me/573058921629?text=Hola%20Dani,%20me%20gustar%C3%ADa%20consultar%20por%20tarjetas%20NFC%20adicionales%20para%20mi%20negocio." rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">help</span><span class="">Consultar adicionales</span></a></div><div class="mt-space-2xl bg-surface-container-low rounded-2xl p-space-lg lg:p-space-xl shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-danger-red text-[24px]">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-deep-navy">Transparencia Radical: Lo que NO hacemos</h3>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant max-w-3xl mb-space-md">
+          Para garantizar la entrega en 24 horas y mantener precios accesibles sin enredos técnicos ni dolores de cabeza para ti:
+        </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-pure p-space-md rounded-xl flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-danger-red text-[20px] shrink-0">block</span>
+<div>
+<p class="font-headline-sm text-body-lead text-deep-navy font-bold">Sin pasarelas bancarias complejas</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No cobramos vía PayU o Wompi con logins pesados. Tus clientes piden directo a tu WhatsApp y te pagan por Nequi, Daviplata o contraentrega.</p>
+</div>
+</div>
+<div class="bg-surface-pure p-space-md rounded-xl flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-danger-red text-[20px] shrink-0">block</span>
+<div>
+<p class="font-headline-sm text-body-lead text-deep-navy font-bold">Máximo 50 productos</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No hacemos tiendas tipo MercadoLibre o Amazon con 5.000 referencias. Nos enfocamos en tus mejores productos que realmente dejan margen.</p>
+</div>
+</div>
+<div class="bg-surface-pure p-space-md rounded-xl flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-danger-red text-[20px] shrink-0">block</span>
+<div>
+<p class="font-headline-sm text-body-lead text-deep-navy font-bold">Sin registros ni usuarios</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tu cliente no tiene que crear contraseñas ni verificar correos. Entra, mira lo que vendes y te escribe al WhatsApp en un clic.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VALOR AGREGADO: TARJETAS INTELIGENTES NFC -->
+<section class="w-full py-space-3xl bg-surface-container-high/40 overflow-hidden">
+<div class="max-w-[1200px] mx-auto px-space-md lg:px-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Image with NFC Context -->
+<div class="lg:col-span-6 order-2 lg:order-1">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-pure p-2">
+<div class="w-full h-[360px] rounded-xl bg-surface-container-low border border-card-stroke overflow-hidden relative flex flex-col items-center justify-center p-space-lg text-center"><div class="w-14 h-14 rounded-2xl bg-surface-pure text-electric-orange flex items-center justify-center shadow-sm mb-space-xs"><span class="material-symbols-outlined text-[32px]">contactless</span></div><p class="font-label-bold text-label-bold text-deep-navy">Espacio reservado para foto / mockup</p><p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1">Demostración de tarjetas inteligentes NFC físicas con código QR</p></div>
+<div class="absolute bottom-6 left-6 right-6 bg-surface-pure/95 backdrop-blur-md p-space-md rounded-xl shadow-lg flex items-center justify-between">
+<div>
+<span class="font-label-bold text-label-bold text-deep-navy">Tecnología de proximidad</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Compatible con iPhone y Android modernos</p>
+</div>
+<span class="inline-flex items-center gap-1 bg-whatsapp-green/15 text-whatsapp-green-dark px-3 py-1 rounded-full font-label-bold text-label-sm">
+                Sin Baterías
+              </span>
+</div>
+</div>
+</div>
+<!-- Info & Copy -->
+<div class="lg:col-span-6 flex flex-col gap-space-md order-1 lg:order-2">
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-electric-orange">Exclusivo en Colombia</span>
+<h2 class="font-headline-xl text-headline-xl text-deep-navy">
+            Tarjetas Físicas Inteligentes <br/>
+<span class="text-electric-orange">NFC + Código QR</span>
+</h2>
+<p class="font-body-lead text-body-lead text-on-surface-variant">
+            Lleva tu presencia web al mundo físico. Con nuestras tarjetas inteligentes no necesitas gastar plata imprimiendo volantes de papel que la gente bota a la basura.
+          </p>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-electric-orange/10 text-electric-orange flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">reviews</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-deep-navy">Más Reseñas 5 Estrellas en Google</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Acercas la tarjeta al teléfono del cliente en tu mostrador y se le abre directamente el formulario de calificación de Google Maps.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-whatsapp-green/10 text-whatsapp-green-dark flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">restaurant_menu</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-deep-navy">Menú Digital Rápido en la Mesa</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sin tener que descargar PDFs pesados que demoran minutos en abrir. Abre en milisegundos en el navegador del comensal.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-deep-navy/10 text-deep-navy flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-deep-navy">Tarjeta de Presentación Ejecutiva</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Guarda tu contacto, teléfono y portafolio en la agenda de tus prospectos en un segundo en reuniones o ferias de negocios.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PORTAFOLIO Y PROYECTOS REALES -->
+<section class="w-full py-space-3xl bg-surface relative overflow-hidden" id="portafolio"><div class="max-w-[1200px] mx-auto px-space-md lg:px-space-xl"><div class="text-center max-w-3xl mx-auto mb-space-2xl"><div class="inline-flex items-center gap-space-xxs bg-electric-orange/10 text-electric-orange px-space-sm py-1 rounded-full font-label-bold text-label-sm uppercase tracking-wider mb-space-xs"><span class="material-symbols-outlined text-[16px]">verified</span> Casos Reales Entregados</div><h2 class="font-headline-xl text-headline-xl text-deep-navy tracking-tight">Páginas reales funcionando hoy</h2><p class="font-body-lead text-body-lead text-on-surface-variant mt-space-xs">Sitios web diseñados y lanzados en tiempo récord. Haz clic para probar la velocidad de carga, la interacción y el embudo directo de ventas por WhatsApp de cada negocio.</p></div><div class="flex flex-col gap-space-3xl"><!-- PROYECTO 1: GAVÉ PROPIEDADES --><div class="bg-surface-pure rounded-3xl border border-card-stroke shadow-xl p-space-lg lg:p-space-2xl grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"><div class="lg:col-span-7 flex flex-col gap-space-md order-2 lg:order-1"><div class="flex flex-wrap items-center gap-space-xs"><span class="px-3 py-1 rounded-full bg-surface-container font-label-bold text-label-sm text-deep-navy">Inmobiliaria &amp; Bienes Raíces</span><span class="px-3 py-1 rounded-full bg-whatsapp-green/10 text-whatsapp-green-dark font-label-bold text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bolt</span> Plan Catálogo Interactivo</span><span class="text-label-sm font-label-sm text-on-surface-variant">Entrega en 24 Horas</span></div><h3 class="font-headline-lg text-headline-lg text-deep-navy">Gavé Propiedades</h3><p class="font-body-lead text-body-lead text-on-surface-variant">"Tu confianza, nuestra mayor propiedad". Desarrollamos una plataforma inmobiliaria premium con arquitectura visual limpia, catálogo organizado de propiedades destacadas y botón de asesoría legal y comercial directa por WhatsApp.</p><div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm py-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low border border-card-stroke"><div class="flex items-center gap-space-xxs text-deep-navy font-label-bold text-label-bold"><span class="material-symbols-outlined text-electric-orange text-[20px]">filter_alt</span> Catálogo con Filtros</div><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Propiedades organizadas por ciudad, tipo y valor con fichas técnicas completas.</p></div><div class="p-space-sm rounded-xl bg-surface-container-low border border-card-stroke"><div class="flex items-center gap-space-xxs text-deep-navy font-label-bold text-label-bold"><span class="material-symbols-outlined text-whatsapp-green text-[20px]">chat</span> Conversión Inmediata</div><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Cada inmueble cuenta con botón de WhatsApp precargado con la referencia exacta.</p></div></div><div class="flex flex-wrap items-center gap-space-sm pt-space-xs"><a class="inline-flex items-center gap-space-xs bg-electric-orange hover:bg-electric-orange-hover text-on-primary font-label-bold text-label-bold px-space-lg py-space-sm rounded-xl transition-all shadow-md hover:-translate-y-0.5" href="https://gave-propiedades.surge.sh" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">language</span><span class="">Probar página en vivo</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a><span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-whatsapp-green">link</span> gave-propiedades.surge.sh</span></div></div><div class="lg:col-span-5 order-1 lg:order-2"><div class="rounded-2xl overflow-hidden shadow-2xl border border-deep-navy/10 bg-deep-navy group"><div class="bg-deep-navy px-space-sm py-2 flex items-center gap-1.5 border-b border-white/10"><div class="w-2.5 h-2.5 rounded-full bg-danger-red/80"></div><div class="w-2.5 h-2.5 rounded-full bg-electric-orange/80"></div><div class="w-2.5 h-2.5 rounded-full bg-whatsapp-green/80"></div><div class="bg-white/10 text-white/70 text-[11px] font-label-sm px-3 py-0.5 rounded-md ml-2 flex items-center gap-1 w-full max-w-[260px] truncate"><span class="material-symbols-outlined text-[12px] text-whatsapp-green">lock</span> gave-propiedades.surge.sh</div></div><div class="relative h-[380px] overflow-hidden bg-surface-container-low"><img alt="Página Web Inmobiliaria Gavé Propiedades" class="w-full h-auto object-cover transition-transform duration-[3500ms] ease-in-out group-hover:-translate-y-1/3" decoding="async" loading="lazy" src="assets/images/gave-propiedades.png"/><div class="absolute inset-0 bg-gradient-to-t from-deep-navy/30 via-transparent to-transparent pointer-events-none"></div></div></div></div></div><!-- PROYECTO 2: NEXPLAY COLOMBIA --><div class="bg-deep-navy text-white rounded-3xl shadow-2xl p-space-lg lg:p-space-2xl grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"><div class="lg:col-span-5"><div class="rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#070e17] group"><div class="bg-[#070e17] px-space-sm py-2 flex items-center gap-1.5 border-b border-white/10"><div class="w-2.5 h-2.5 rounded-full bg-danger-red/80"></div><div class="w-2.5 h-2.5 rounded-full bg-electric-orange/80"></div><div class="w-2.5 h-2.5 rounded-full bg-whatsapp-green/80"></div><div class="bg-white/10 text-white/70 text-[11px] font-label-sm px-3 py-0.5 rounded-md ml-2 flex items-center gap-1 w-full max-w-[260px] truncate"><span class="material-symbols-outlined text-[12px] text-whatsapp-green">lock</span> nexplaycol.online</div></div><div class="relative h-[380px] overflow-hidden bg-black"><img alt="Plataforma Web Nexplay Colombia" class="w-full h-full object-cover object-top" decoding="async" loading="lazy" src="assets/images/image-preview.png"/><div class="absolute inset-0 bg-gradient-to-t from-deep-navy/40 via-transparent to-transparent pointer-events-none"></div></div></div></div><div class="lg:col-span-7 flex flex-col gap-space-md"><div class="flex flex-wrap items-center gap-space-xs"><span class="px-3 py-1 rounded-full bg-white/10 font-label-bold text-label-sm text-secondary-fixed">Gaming &amp; E-Sports</span><span class="px-3 py-1 rounded-full bg-electric-orange/20 text-electric-orange font-label-bold text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">speed</span> Plan Animado Alto Desempeño</span><span class="text-label-sm font-label-sm text-white/60">Ultra Rápida</span></div><h3 class="font-headline-lg text-headline-lg text-white">Nexplay Colombia</h3><p class="font-body-lead text-body-lead text-surface-container-high">"Tu PC, tu consola. Sin límites". Experiencia digital inmersiva diseñada para el ecosistema gamer: vitrina de consolas personalizadas Bazzite OS, control háptico, pasarela de reserva y soporte directo.</p><div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm py-space-xs"><div class="p-space-sm rounded-xl bg-white/5 border border-white/10"><div class="flex items-center gap-space-xxs text-white font-label-bold text-label-bold"><span class="material-symbols-outlined text-electric-orange text-[20px]">animation</span> Microinteracciones</div><p class="font-body-sm text-body-sm text-surface-container-high mt-0.5">Efectos visuales fluidos que transmiten alta tecnología sin penalizar la velocidad de carga.</p></div><div class="p-space-sm rounded-xl bg-white/5 border border-white/10"><div class="flex items-center gap-space-xxs text-white font-label-bold text-label-bold"><span class="material-symbols-outlined text-whatsapp-green text-[20px]">shopping_bag</span> Reservas y Preventa</div><p class="font-body-sm text-body-sm text-surface-container-high mt-0.5">Captura de clientes interesados y reservas directas en pesos colombianos.</p></div></div><div class="flex flex-wrap items-center gap-space-sm pt-space-xs"><a class="inline-flex items-center gap-space-xs bg-whatsapp-green hover:bg-whatsapp-green-dark text-on-tertiary font-label-bold text-label-bold px-space-lg py-space-sm rounded-xl transition-all shadow-md hover:-translate-y-0.5" href="https://nexplaycol.online" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">sports_esports</span><span class="">Visitar nexplaycol.online</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a><span class="text-label-sm font-label-sm text-white/50 flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-whatsapp-green">check_circle</span> Servidores optimizados en Colombia</span></div></div></div><!-- PROYECTO 3: IMPACTO BURGER --><div class="bg-surface-pure rounded-3xl border border-card-stroke shadow-xl p-space-lg lg:p-space-2xl grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"><div class="lg:col-span-7 flex flex-col gap-space-md order-2 lg:order-1"><div class="flex flex-wrap items-center gap-space-xs"><span class="px-3 py-1 rounded-full bg-surface-container font-label-bold text-label-sm text-deep-navy">Restaurante Gastronómico</span><span class="px-3 py-1 rounded-full bg-electric-orange/15 text-electric-orange font-label-bold text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">restaurant</span> Plan Interactiva + Extra</span><span class="text-label-sm font-label-sm text-on-surface-variant">Pedidos + NFC</span></div><h3 class="font-headline-lg text-headline-lg text-deep-navy">Impacto Burger</h3><p class="font-body-lead text-body-lead text-on-surface-variant">"Sabor único, ingredientes reales y una experiencia que impacta". Menú interactivo desglosado con selector de acompañantes, combos, cálculo automático y botón directo para mandar la orden a cocina por WhatsApp.</p><div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm py-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low border border-card-stroke"><div class="flex items-center gap-space-xxs text-deep-navy font-label-bold text-label-bold"><span class="material-symbols-outlined text-electric-orange text-[20px]">touch_app</span> Menú Desglosado Interactivo</div><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Muestra ingredientes, salsas y adicionales sin PDFs pesados que gastan datos móviles.</p></div><div class="p-space-sm rounded-xl bg-surface-container-low border border-card-stroke"><div class="flex items-center gap-space-xxs text-deep-navy font-label-bold text-label-bold"><span class="material-symbols-outlined text-whatsapp-green text-[20px]">nfc</span> Tarjeta NFC en Mesa</div><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Los comensales acercan su teléfono a la tarjeta y abren la carta o dejan reseña en Google.</p></div></div><div class="flex flex-wrap items-center gap-space-sm pt-space-xs"><a class="inline-flex items-center gap-space-xs bg-electric-orange hover:bg-electric-orange-hover text-on-primary font-label-bold text-label-bold px-space-lg py-space-sm rounded-xl transition-all shadow-md hover:-translate-y-0.5" href="https://impactoburger.surge.sh" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="">Probar menú interactivo</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a><span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-whatsapp-green">link</span> impactoburger.surge.sh</span></div></div><div class="lg:col-span-5 order-1 lg:order-2"><div class="rounded-2xl overflow-hidden shadow-2xl border border-deep-navy/10 bg-deep-navy group"><div class="bg-deep-navy px-space-sm py-2 flex items-center gap-1.5 border-b border-white/10"><div class="w-2.5 h-2.5 rounded-full bg-danger-red/80"></div><div class="w-2.5 h-2.5 rounded-full bg-electric-orange/80"></div><div class="w-2.5 h-2.5 rounded-full bg-whatsapp-green/80"></div><div class="bg-white/10 text-white/70 text-[11px] font-label-sm px-3 py-0.5 rounded-md ml-2 flex items-center gap-1 w-full max-w-[260px] truncate"><span class="material-symbols-outlined text-[12px] text-whatsapp-green">lock</span> impactoburger.surge.sh</div></div><div class="relative h-[380px] overflow-hidden bg-surface-container-low"><img alt="Menú y Web Interactiva Impacto Burger" class="w-full h-auto block transition-transform duration-[7000ms] ease-linear group-hover:-translate-y-[calc(100%-380px)]" decoding="async" loading="lazy" src="assets/images/impacto-burger.png"/><div class="absolute bottom-3 left-1/2 -translate-x-1/2 pointer-events-none transition-opacity duration-300 group-hover:opacity-0 bg-deep-navy/80 backdrop-blur-sm text-white text-[11px] font-label-bold px-3 py-1 rounded-full flex items-center gap-1 shadow-md"><span class="material-symbols-outlined text-[14px] text-electric-orange animate-bounce">mouse</span> Pasa el cursor para ver todo el sitio</div></div></div></div></div></div></div></section>
+<!-- TESTIMONIOS -->
+<section class="w-full py-space-3xl bg-surface-container-low">
+<div class="max-w-[1200px] mx-auto px-space-md lg:px-space-xl">
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-electric-orange">Testimonios Verificados</span>
+<h2 class="font-headline-xl text-headline-xl text-deep-navy mt-space-xxs">Negocios que ya están vendiendo</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Testimonio 1 -->
+<div class="bg-surface-pure p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-electric-orange mb-space-xs">
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<p class="font-body-default text-body-default text-deep-navy italic">
+              "Una agencia en Bogotá me pidió 3 millones de pesos y 45 días de plazo. Dani me entregó exactamente lo que necesitaba al día siguiente por menos de un tercio de eso. Ya tenemos pedidos llegando directo al chat."
+            </p>
+</div>
+<div class="pt-space-md flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-deep-navy text-white font-headline-sm flex items-center justify-center">
+              A
+            </div>
+<div>
+<p class="font-headline-sm text-body-lead font-bold text-deep-navy">Andrés Morales</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Restaurante / Medellín</p>
+</div>
+</div>
+</div>
+<!-- Testimonio 2 -->
+<div class="bg-surface-pure p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-electric-orange mb-space-xs">
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<p class="font-body-default text-body-default text-deep-navy italic">
+              "Las tarjetas NFC que nos entregó son una locura en la cafetería. Los clientes acercan el teléfono para ver el menú y dejan reseñas en Google. Subimos 40 calificaciones de 5 estrellas en 2 semanas."
+            </p>
+</div>
+<div class="pt-space-md flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-electric-orange text-white font-headline-sm flex items-center justify-center">
+              C
+            </div>
+<div>
+<p class="font-headline-sm text-body-lead font-bold text-deep-navy">Camila Restrepo</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Café &amp; Repostería / Manizales</p>
+</div>
+</div>
+</div>
+<!-- Testimonio 3 -->
+<div class="bg-surface-pure p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-electric-orange mb-space-xs">
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[18px]" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<p class="font-body-default text-body-default text-deep-navy italic">
+              "Lo mejor es que cuando cambio de precios o meto promociones no me tengo que romper la cabeza tocando código. Le escribo a Dani al WhatsApp y en un momentico queda actualizado."
+            </p>
+</div>
+<div class="pt-space-md flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-whatsapp-green text-white font-headline-sm flex items-center justify-center">
+              F
+            </div>
+<div>
+<p class="font-headline-sm text-body-lead font-bold text-deep-navy">Felipe Caicedo</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Gave Propiedades / Armenia</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PREGUNTAS FRECUENTES (FAQ INTERACTIVO) -->
+<section class="w-full py-space-3xl bg-surface" id="faq">
+<div class="max-w-[900px] mx-auto px-space-md lg:px-space-xl">
+<div class="text-center mb-space-2xl">
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-electric-orange">Cero Dudas</span>
+<h2 class="font-headline-xl text-headline-xl text-deep-navy mt-space-xxs">Preguntas Frecuentes</h2>
+<p class="font-body-lead text-body-lead text-on-surface-variant mt-space-xs">Todo lo que necesitas saber antes de pedir tu página.</p>
+</div>
+<div class="flex flex-col gap-space-sm" id="faq-container">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-pure rounded-xl p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-deep-navy gap-space-md" onclick="toggleFaq(this)">
+<span class="">¿Realmente está lista en 24 horas?</span>
+<span class="material-symbols-outlined text-electric-orange transition-transform duration-200" style="transform: rotate(180deg);">expand_more</span>
+</button>
+<div class="faq-answer mt-space-xs pt-space-xs font-body-default text-body-default text-on-surface-variant">
+            Sí. El cronómetro de 24 horas hábiles comienza en cuanto firmamos el contrato. Como no usamos sistemas enredados ni burocracia, diseñamos y publicamos el mismo día.
+          </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-pure rounded-xl p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-deep-navy gap-space-md" onclick="toggleFaq(this)">
+<span class="">¿Qué incluye la mensualidad de mantenimiento?</span>
+<span class="material-symbols-outlined text-electric-orange transition-transform duration-200" style="transform: rotate(180deg);">expand_more</span>
+</button>
+<div class="faq-answer mt-space-xs pt-space-xs font-body-default text-body-default text-on-surface-variant">
+            La mensualidad cubre el hosting de ultra velocidad, el certificado SSL de seguridad (el candado verde), soporte técnico continuo y la posibilidad de solicitar cambios menores (actualizaciones de precios, números de teléfono, nuevos textos o fotos de productos) sin costos adicionales por hora de programación.
+          </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-pure rounded-xl p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-deep-navy gap-space-md" onclick="toggleFaq(this)">
+<span class="">¿Qué pasa si quiero cambiar precios o productos después?</span>
+<span class="material-symbols-outlined text-electric-orange transition-transform duration-200" style="transform: rotate(180deg);">expand_more</span>
+</button>
+<div class="faq-answer mt-space-xs pt-space-xs font-body-default text-body-default text-on-surface-variant">
+            Simplemente me mandas un mensaje a WhatsApp con la foto o el texto nuevo y nosotros lo dejamos aplicado en tu sitio. No tienes que aprender a manejar paneles técnicos complicados.
+          </div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="bg-surface-pure rounded-xl p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-deep-navy gap-space-md" onclick="toggleFaq(this)">
+<span class="">¿Por qué no tengo que lidiar con hosting o código?</span>
+<span class="material-symbols-outlined text-electric-orange transition-transform duration-200" style="transform: rotate(180deg);">expand_more</span>
+</button>
+<div class="faq-answer mt-space-xs pt-space-xs font-body-default text-body-default text-on-surface-variant">
+            Porque los dueños de negocios en Colombia necesitan vender, no perder días configurando servidores, DNS o lidiando con caídas de páginas. Nosotros nos encargamos de toda la infraestructura para que tú solo recibas clientes.
+          </div>
+</div>
+<!-- FAQ Item 5 -->
+<div class="bg-surface-pure rounded-xl p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-deep-navy gap-space-md" onclick="toggleFaq(this)">
+<span class="">¿Cómo funcionan las tarjetas físicas NFC con QR?</span>
+<span class="material-symbols-outlined text-electric-orange transition-transform duration-200" style="transform: rotate(180deg);">expand_more</span>
+</button>
+<div class="faq-answer mt-space-xs pt-space-xs font-body-default text-body-default text-on-surface-variant">
+            Son tarjetas inteligentes que llevan un chip programado con el enlace a tu web, menú o reseña de Google. Solo basta con que el cliente acerque la parte trasera de su celular a la tarjeta para que se abra automáticamente tu link. También traen impreso un código QR para teléfonos más antiguos.
+          </div>
+</div>
+<!-- FAQ Item 6 -->
+<div class="bg-surface-pure rounded-xl p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-deep-navy gap-space-md" onclick="toggleFaq(this)">
+<span class="">¿Cómo se realiza el pago?</span>
+<span class="material-symbols-outlined text-electric-orange transition-transform duration-200" style="transform: rotate(180deg);">expand_more</span>
+</button>
+<div class="faq-answer mt-space-xs pt-space-xs font-body-default text-body-default text-on-surface-variant">Aceptamos transferencias por Bancolombia, Nequi, Daviplata, así como tarjetas de crédito y débito. Puedes iniciar con el 50% de anticipo para arrancar el desarrollo y liquidar el 50% restante cuando tu página esté montada y aprobada al aire en 24 horas.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FORMULARIO DE CONTACTO RÁPIDO A WHATSAPP -->
+<section class="w-full py-space-3xl bg-deep-navy text-white" id="contacto-rapido">
+<div class="max-w-[1000px] mx-auto px-space-md lg:px-space-xl">
+<div class="bg-surface-pure text-deep-navy rounded-3xl p-space-lg lg:p-space-2xl shadow-2xl" id="formulario">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-electric-orange">Activación Inmediata</span>
+<h2 class="font-headline-xl text-headline-xl text-deep-navy mt-space-xxs">Empieza tu web hoy mismo</h2>
+<p class="font-body-default text-body-default text-on-surface-variant mt-space-xs">
+            Diligencia estos 4 campos rápidos y serás redirigido directamente a WhatsApp con los datos listos para que Dani te atienda al instante.
+          </p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="leadForm" onsubmit="handleLeadSubmit(event)">
+<!-- Nombre -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-bold text-label-bold text-deep-navy" for="clientName">Tu Nombre y Apellido *</label>
+<input class="w-full h-12 px-space-sm rounded-lg bg-surface-container-low text-deep-navy font-body-default focus:bg-white focus:outline-none focus:ring-2 focus:ring-deep-navy transition-all" id="clientName" placeholder="Ej: Sofía Gómez" required="" type="text"/>
+</div>
+<!-- Teléfono / WhatsApp -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-bold text-label-bold text-deep-navy" for="clientPhone">Número de WhatsApp *</label>
+<input class="w-full h-12 px-space-sm rounded-lg bg-surface-container-low text-deep-navy font-body-default focus:bg-white focus:outline-none focus:ring-2 focus:ring-deep-navy transition-all" id="clientPhone" placeholder="Ej: 310 123 4567" required="" type="tel"/>
+</div>
+<!-- Nombre del Negocio -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-bold text-label-bold text-deep-navy" for="businessName">Nombre de tu Negocio / Marca *</label>
+<input class="w-full h-12 px-space-sm rounded-lg bg-surface-container-low text-deep-navy font-body-default focus:bg-white focus:outline-none focus:ring-2 focus:ring-deep-navy transition-all" id="businessName" placeholder="Ej: Café Arábigo o Consultoría Legal" required="" type="text"/>
+</div>
+<!-- Tipo de Plan de Interés -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-bold text-label-bold text-deep-navy" for="planSelected">Plan de Interés *</label>
+<select class="w-full h-12 px-space-sm rounded-lg bg-surface-container-low text-deep-navy font-body-default focus:bg-white focus:outline-none focus:ring-2 focus:ring-deep-navy transition-all" id="planSelected">
+<option value="Plan Interactiva ($950.000 COP - Más Popular)">Plan Interactiva ($950.000 COP) - Más Popular ★</option>
+<option value="Plan Básica ($550.000 COP)">Plan Básica ($550.000 COP)</option>
+<option value="Plan Animada ($750.000 COP)">Plan Animada ($750.000 COP)</option>
+<option value="Plan Interactiva + Extras ($1'250.000 COP)">Plan Interactiva + Extras ($1'250.000 COP)</option>
+<option value="Tengo dudas / Asesoría previa">Aún no estoy seguro / Deseo Asesoría</option>
+</select>
+</div>
+<!-- Botón de Envío -->
+<div class="md:col-span-2 pt-space-sm">
+<button class="w-full h-14 bg-whatsapp-green hover:bg-whatsapp-green-dark text-on-tertiary font-headline-sm text-headline-sm rounded-xl transition-all shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:-translate-y-0.5 flex items-center justify-center gap-space-xs cursor-pointer" type="submit">
+<svg aria-hidden="true" class="w-6 h-6 fill-current shrink-0" viewbox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.9 11.9 0 0 0 5.86 1.52h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.44zm-8.46 17.85h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.92 9.92 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.49-4.46 9.94-9.98 9.94zm5.46-7.46c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.47-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.64-.93-2.24-.24-.59-.49-.51-.68-.52-.18-.01-.38-.01-.58-.01-.2 0-.53.08-.8.38-.28.3-1.06 1.04-1.06 2.53 0 1.5 1.09 2.94 1.24 3.14.15.2 2.15 3.28 5.2 4.6.73.31 1.3.5 1.74.64.73.23 1.39.2 1.92.12.59-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z"></path></svg>
+<span class="">Empezar Ya</span>
+</button>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mt-space-xs">
+              🔒 Tus datos van directamente a la conversación de WhatsApp. Sin spam ni correos molestos.
+            </p>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- WIDGET FLOTANTE DE WHATSAPP -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center gap-space-xs">
+<!-- Live Agent Speed Tooltip -->
+<div class="hidden sm:flex items-center gap-space-xxs bg-deep-navy text-white px-space-sm py-1.5 rounded-full shadow-xl">
+<span class="w-2 h-2 rounded-full bg-whatsapp-green animate-pulse"></span>
+<span class="font-label-bold text-label-sm">¡En línea!</span>
+</div>
+<!-- Floating Circular Trigger -->
+<a aria-label="Abrir WhatsApp" class="w-14 h-14 rounded-full bg-whatsapp-green hover:bg-whatsapp-green-dark text-white flex items-center justify-center shadow-2xl transition-transform hover:scale-105" href="https://wa.me/573058921629?text=Hola%20Dani,%20vengo%20desde%20tu%20sitio%20web%20y%20quisiera%20asesor%C3%ADa%20para%20mi%20p%C3%A1gina%20web." rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-7 h-7 fill-current shrink-0" viewbox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.9 11.9 0 0 0 5.86 1.52h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.44zm-8.46 17.85h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.92 9.92 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.49-4.46 9.94-9.98 9.94zm5.46-7.46c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.47-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.64-.93-2.24-.24-.59-.49-.51-.68-.52-.18-.01-.38-.01-.58-.01-.2 0-.53.08-.8.38-.28.3-1.06 1.04-1.06 2.53 0 1.5 1.09 2.94 1.24 3.14.15.2 2.15 3.28 5.2 4.6.73.31 1.3.5 1.74.64.73.23 1.39.2 1.92.12.59-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z"></path></svg>
+</a>
+</div>
+</div>
+<script>
+  function toggleFaq(button) {
+    const answer = button.nextElementSibling;
+    const icon = button.querySelector('.material-symbols-outlined');
+    const isHidden = answer.classList.contains('hidden');
+    
+    if (isHidden) {
+      answer.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      answer.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  function seleccionarPlan(plan) {
+    const select = document.getElementById('planSelected');
+    if (select) {
+      select.value = plan;
+    }
+    const target = document.getElementById('formulario') || document.getElementById('contacto-rapido');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+    const nameInput = document.getElementById('clientName');
+    if (nameInput) {
+      setTimeout(() => nameInput.focus(), 600);
+    }
+  }
+
+  function handleLeadSubmit(event) {
+    event.preventDefault();
+    const nombre = document.getElementById('clientName').value.trim();
+    const telefono = document.getElementById('clientPhone').value.trim();
+    const negocio = document.getElementById('businessName').value.trim();
+    const plan = document.getElementById('planSelected').value;
+
+    const message = `Hola Dani, quiero empezar mi web.%0A%0A` +
+      `*Nombre:* ${encodeURIComponent(nombre)}%0A` +
+      `*Teléfono:* ${encodeURIComponent(telefono)}%0A` +
+      `*Negocio:* ${encodeURIComponent(negocio)}%0A` +
+      `*Plan:* ${encodeURIComponent(plan)}`;
+
+    window.open(`https://wa.me/573058921629?text=${message}`, '_blank');
+  }
+</script></main>
+
+  <footer class="w-full bg-surface-container-low mt-space-3xl" id="contacto"><div class="max-w-[1200px] mx-auto px-space-md lg:px-space-xl py-space-3xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Logo Las Páginas de Dani" class="h-8 sm:h-10 w-auto object-contain" decoding="async" loading="lazy" src="assets/images/logo.png"/><span class="font-headline-sm text-headline-sm text-deep-navy">Las páginas de Dani</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Diseño y entrega récord de sitios web profesionales para negocios en Colombia en 24 horas. Claridad comercial, soporte ágil y resultados inmediatos.</p><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-whatsapp-green">check_circle</span><span class="font-label-sm text-label-sm">Disponibilidad en Colombia</span></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-deep-navy">Secciones</h3><ul class="flex flex-col gap-space-xxs"><li class="" role="none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#inicio">Inicio</a></li><li class="" role="none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#servicios">Planes y Servicios</a></li><li class="" role="none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#precios">Precios Transparentes</a></li><li class="" role="none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#portafolio">Proyectos Realizados</a></li><li class="" role="none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#faq">Preguntas Frecuentes</a></li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-deep-navy">Contacto en Colombia</h3><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-electric-orange">call</span><a class="hover:text-on-surface transition-colors" href="tel:+573058921629">+57 305 892 1629</a></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-electric-orange">schedule</span><span class="">Lunes a Viernes: <br/>9:00 AM - 11:00 AM<br/>2:00 PM - 4:00 PM</span></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-deep-navy">Atención Inmediata</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Habla directamente con nuestro equipo de desarrollo y activa tu proyecto hoy mismo.</p><a class="inline-flex items-center justify-center gap-space-xs bg-whatsapp-green hover:bg-whatsapp-green-dark text-on-tertiary px-space-md py-space-xs rounded-lg font-label-bold text-label-bold transition-all shadow-[0_2px_4px_rgba(15,30,54,0.04)]" href="https://wa.me/573058921629?text=Hola%20Dani,%20quiero%20hablar%20con%20el%20equipo%20de%20Las%20P%C3%A1ginas%20de%20Dani." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-5 h-5 fill-current shrink-0" viewbox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.9 11.9 0 0 0 5.86 1.52h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.44zm-8.46 17.85h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.92 9.92 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.49-4.46 9.94-9.98 9.94zm5.46-7.46c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.47-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.64-.93-2.24-.24-.59-.49-.51-.68-.52-.18-.01-.38-.01-.58-.01-.2 0-.53.08-.8.38-.28.3-1.06 1.04-1.06 2.53 0 1.5 1.09 2.94 1.24 3.14.15.2 2.15 3.28 5.2 4.6.73.31 1.3.5 1.74.64.73.23 1.39.2 1.92.12.59-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z"></path></svg><span class="">WhatsApp Directo</span></a></div></div><div class="mt-space-2xl pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant"><p class="font-body-sm text-body-sm text-center md:text-left">© 2024 Las páginas de Dani. Todos los derechos reservados. Colombia.</p><p class="font-label-sm text-label-sm text-center md:text-right max-w-lg">Aviso legal: Los planes incluyen soporte técnico continuo y hosting bajo condiciones de renovación y suscripción anual especificada en cada cotización.</p></div></div></footer>
+
+  
+<!-- Botón Flotante WhatsApp -->
+<aside aria-label="Contacto directo por WhatsApp">
+<a aria-label="Hablar por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-whatsapp-green hover:bg-whatsapp-green-dark text-white rounded-full shadow-2xl transition-all transform hover:scale-110 floating-whatsapp" href="https://wa.me/573058921629?text=Hola%20Dani,%20vengo%20desde%20tu%20sitio%20web%20y%20quisiera%20asesor%C3%ADa%20para%20mi%20p%C3%A1gina%20web." rel="noopener noreferrer" target="_blank" title="Hablar por WhatsApp con Dani">
+<svg aria-hidden="true" class="w-8 h-8 fill-current" viewbox="0 0 24 24">
+<path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.9 11.9 0 0 0 5.86 1.52h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.44zm-8.46 17.85h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.92 9.92 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.49-4.46 9.94-9.98 9.94zm5.46-7.46c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.47-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.64-.93-2.24-.24-.59-.49-.51-.68-.52-.18-.01-.38-.01-.58-.01-.2 0-.53.08-.8.38-.28.3-1.06 1.04-1.06 2.53 0 1.5 1.09 2.94 1.24 3.14.15.2 2.15 3.28 5.2 4.6.73.31 1.3.5 1.74.64.73.23 1.39.2 1.92.12.59-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z"></path>
+</svg>
+</a>
+</aside>
+
+
+  <!-- Modular JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
