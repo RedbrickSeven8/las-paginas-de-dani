@@ -110,7 +110,7 @@ function initScrollToTop() {
 
 // 5. Plan Selection & Lead Submission (WhatsApp + Google Sheet webhook connector)
 // Webhook endpoint de Google Apps Script (Reemplazar con tu URL generada tras el despliegue)
-const GOOGLE_SHEETS_WEBHOOK_URL = window.GOOGLE_SHEETS_WEBHOOK_URL || '';
+const GOOGLE_SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzGpZjGr9B1gjYzRKXnBF5jfua7Pe0gmZxBzav-4vjwYx1JOs7272FqTwKVCWoFvfqM/exec';
 
 function initSmoothScroll() {
   window.seleccionarPlan = function(plan) {
