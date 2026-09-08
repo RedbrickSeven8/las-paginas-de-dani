@@ -1,6 +1,6 @@
 /**
- * Las Páginas de Dani - UI & Animation Controller
- * Separation of Concerns: Interactive logic & animations
+ * Las Páginas de Dani - UI, Scroll & Google Sheets Integration Controller
+ * Separation of Concerns: Modular frontend logic
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initFaqAccordion();
   initSmoothScroll();
+  initScrollToTop();
 });
 
 // 1. Lazy Scroll Entrance Animations with IntersectionObserver
@@ -18,7 +19,6 @@ function initScrollAnimations() {
 
   animatedElements.forEach((el, index) => {
     el.classList.add('reveal-on-scroll');
-    // Add staggered delay based on child index
     const siblingIndex = Array.from(el.parentElement ? el.parentElement.children : []).indexOf(el);
     if (siblingIndex === 1) el.classList.add('reveal-delay-1');
     else if (siblingIndex === 2) el.classList.add('reveal-delay-2');
@@ -29,7 +29,7 @@ function initScrollAnimations() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        obs.unobserve(entry.target); // Unobserve once animated for high performance
+        obs.unobserve(entry.target);
       }
     });
   }, {
@@ -69,7 +69,6 @@ function initFaqAccordion() {
     const icon = button.querySelector('.material-symbols-outlined');
     const isHidden = answer.classList.contains('hidden');
 
-    // Close all other open answers smoothly
     document.querySelectorAll('#faq .faq-answer').forEach(el => {
       if (el !== answer) {
         el.classList.add('hidden');
@@ -89,7 +88,30 @@ function initFaqAccordion() {
   };
 }
 
-// 4. Smooth Anchor Scrolling & Plan Selection Handler
+// 4. Scroll To Top Button (Bottom-Left)
+function initScrollToTop() {
+  const btn = document.getElementById('scrollToTopBtn');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
+      btn.classList.add('opacity-100', 'translate-y-0');
+    } else {
+      btn.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
+      btn.classList.remove('opacity-100', 'translate-y-0');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// 5. Plan Selection & Lead Submission (WhatsApp + Google Sheet webhook connector)
+// Webhook endpoint de Google Apps Script (Reemplazar con tu URL generada tras el despliegue)
+const GOOGLE_SHEETS_WEBHOOK_URL = window.GOOGLE_SHEETS_WEBHOOK_URL || '';
+
 function initSmoothScroll() {
   window.seleccionarPlan = function(plan) {
     const select = document.getElementById('planSelected');
@@ -113,6 +135,29 @@ function initSmoothScroll() {
     const negocio = document.getElementById('businessName')?.value.trim() || '';
     const plan = document.getElementById('planSelected')?.value || '';
 
+    // Enviar a Google Sheets de forma asíncrona si hay Webhook configurado
+    if (GOOGLE_SHEETS_WEBHOOK_URL) {
+      const payload = {
+        nombre: nombre,
+        whatsapp: telefono,
+        negocio: negocio,
+        plan: plan,
+        fecha: new Date().toISOString()
+      };
+
+      try {
+        fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(err => console.log('Sheet log:', err));
+      } catch (e) {
+        console.warn('Google sheet sync attempt:', e);
+      }
+    }
+
+    // Redirección inmediata a WhatsApp
     const message = `Hola Dani, quiero empezar mi web.%0A%0A` +
       `*Nombre:* ${encodeURIComponent(nombre)}%0A` +
       `*Teléfono:* ${encodeURIComponent(telefono)}%0A` +
