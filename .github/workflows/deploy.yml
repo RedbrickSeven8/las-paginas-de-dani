@@ -1,0 +1,30 @@
+name: Deploy to Surge
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Surge CLI
+        run: npm install -g surge
+
+      - name: Deploy to Surge.sh
+        env:
+          SURGE_LOGIN: ${{ secrets.SURGE_MAIL }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+        run: |
+          surge ./ las-paginas-de-dani.surge.sh

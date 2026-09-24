@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A00" />
+      <stop offset="100%" stop-color="#FF5500" />
+    </linearGradient>
+  </defs>
+  <!-- Text: Las páginas -->
+  <text x="10" y="52" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', sans-serif" font-size="44" font-weight="800" fill="#0A192F" letter-spacing="-0.5">Las páginas</text>
+  
+  <!-- Text: de -->
+  <text x="10" y="142" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', sans-serif" font-size="44" font-weight="800" fill="#0A192F" letter-spacing="-0.5">de</text>
+  
+  <!-- Lightning Bolt replacing left stem of D -->
+  <path d="M 125 60 L 90 122 L 122 122 L 95 180 L 165 105 L 132 105 Z" fill="url(#boltGrad)" />
+  
+  <!-- Letter D (right side loop and body) -->
+  <path d="M 135 60 H 195 C 235 60 265 85 265 120 C 265 155 235 180 195 180 H 135 L 148 152 H 192 C 218 152 236 137 236 120 C 236 103 218 88 192 88 H 145 Z" fill="#0A192F" />
+
+  <!-- Cursor Arrow inside D hole / center -->
+  <path d="M 175 92 L 215 142 L 195 147 L 210 178 L 196 184 L 181 153 L 165 167 Z" fill="#FF7A00" />
+  
+  <!-- Text: ani -->
+  <text x="270" y="165" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', sans-serif" font-size="115" font-weight="900" fill="#0A192F" letter-spacing="-2">ani</text>
+</svg>

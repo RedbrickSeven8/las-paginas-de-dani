@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="burgerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#451a03"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#burgerBg)"/>
+  <rect x="30" y="30" width="740" height="440" rx="12" fill="#1c1917" stroke="#ea580c" stroke-width="2"/>
+  <rect x="30" y="30" width="740" height="40" rx="12" fill="#292524"/>
+  <circle cx="55" cy="50" r="6" fill="#ef4444"/>
+  <circle cx="75" cy="50" r="6" fill="#f59e0b"/>
+  <circle cx="95" cy="50" r="6" fill="#10b981"/>
+  <rect x="130" y="40" width="300" height="20" rx="6" fill="#1c1917"/>
+  <text x="145" y="54" font-family="sans-serif" font-size="11" fill="#fdba74">https://impactoburger.surge.sh</text>
+  
+  <text x="60" y="130" font-family="sans-serif" font-size="28" font-weight="bold" fill="#f97316">IMPACTO BURGER 🍔</text>
+  <text x="60" y="165" font-family="sans-serif" font-size="16" fill="#fed7aa">Menú Digital Interactivo &amp; Pedidos Directos por WhatsApp</text>
+  <rect x="60" y="195" width="200" height="38" rx="8" fill="#ea580c"/>
+  <text x="80" y="220" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Ver Carta &amp; Ordenar</text>
+
+  <g transform="translate(60, 260)">
+    <rect width="210" height="170" rx="10" fill="#292524" stroke="#78350f" stroke-width="1.5"/>
+    <rect x="15" y="15" width="180" height="75" rx="6" fill="#7c2d12"/>
+    <text x="25" y="55" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fef08a">Double Bacon Burger</text>
+    <text x="15" y="115" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ea580c">$28.900 COP</text>
+    <rect x="15" y="130" width="180" height="26" rx="4" fill="#16a34a"/>
+    <text x="50" y="147" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff">+ Pedir por WhatsApp</text>
+  </g>
+  <g transform="translate(290, 260)">
+    <rect width="210" height="170" rx="10" fill="#292524" stroke="#78350f" stroke-width="1.5"/>
+    <rect x="15" y="15" width="180" height="75" rx="6" fill="#854d0e"/>
+    <text x="25" y="55" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fef08a">Crispy Smash Cheese</text>
+    <text x="15" y="115" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ea580c">$24.900 COP</text>
+    <rect x="15" y="130" width="180" height="26" rx="4" fill="#16a34a"/>
+    <text x="50" y="147" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff">+ Pedir por WhatsApp</text>
+  </g>
+  <g transform="translate(520, 260)">
+    <rect width="210" height="170" rx="10" fill="#292524" stroke="#78350f" stroke-width="1.5"/>
+    <rect x="15" y="15" width="180" height="75" rx="6" fill="#713f12"/>
+    <text x="25" y="55" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fef08a">Papas Rústicas Trufadas</text>
+    <text x="15" y="115" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ea580c">$14.500 COP</text>
+    <rect x="15" y="130" width="180" height="26" rx="4" fill="#16a34a"/>
+    <text x="50" y="147" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff">+ Pedir por WhatsApp</text>
+  </g>
+</svg>
