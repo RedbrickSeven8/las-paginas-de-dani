@@ -1,9 +1,9 @@
 /**
- * WHATSAPP MODAL & EMAIL INTEGRATION MODULE
+ * WHATSAPP MODAL & MULTI-CHANNEL EMAIL INTEGRATION MODULE
  * - Captures: Name + Selected Plan (from dropdown / trigger)
  * - Auto-selects plan when clicked from portfolio or pricing
- * - Sends lead data via email to danicamarillo5215@gmail.com (Formspree background dispatch)
- * - Seamlessly redirects user to WhatsApp with phone +57 3058921629
+ * - Dispatches lead data to danicamarillo5215@gmail.com
+ * - Shows loading state on button and seamlessly redirects to WhatsApp (+57 3058921629)
  */
 
 export function initWhatsAppModal() {
@@ -13,6 +13,7 @@ export function initWhatsAppModal() {
   const leadForm = document.getElementById('leadCaptureForm');
   const planSelect = document.getElementById('leadPlanSelect');
   const planModalTitle = document.getElementById('modalPlanTitle');
+  const submitBtn = leadForm?.querySelector('button[type="submit"]');
 
   // Trigger buttons across page
   const openTriggers = document.querySelectorAll('[data-open-modal]');
@@ -100,9 +101,9 @@ export function initWhatsAppModal() {
     }
   });
 
-  // Handle Form Submission -> Email Notification + WhatsApp Redirect
+  // Handle Form Submission -> Email Dispatch + WhatsApp Redirect
   if (leadForm) {
-    leadForm.addEventListener('submit', (e) => {
+    leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = document.getElementById('leadName')?.value.trim();
       const selectedPlan = planSelect?.value || 'Landing Animada ($750k + $75k/mes)';
@@ -112,41 +113,63 @@ export function initWhatsAppModal() {
         return;
       }
 
-      // 1. Envío asíncrono al correo danicamarillo5215@gmail.com
-      const emailPayload = {
-        _replyto: NOTIFICATION_EMAIL,
-        _subject: `⚡ Nuevo Lead en Las Páginas de Dani: ${name} (${selectedPlan})`,
-        nombre: name,
-        plan_seleccionado: selectedPlan,
-        fecha_hora: new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' }),
-        origen: window.location.href
-      };
-
-      try {
-        fetch(`https://formsubmit.co/ajax/${NOTIFICATION_EMAIL}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(emailPayload)
-        }).catch(err => console.log('Email logging notice:', err));
-      } catch (err) {
-        console.log('Dispatch background notice:', err);
+      // UI Feedback: Estado de envío
+      const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <svg style="width:20px; height:20px; animation:spin 1s linear infinite;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+            <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+          </svg>
+          <span>Conectando...</span>
+        `;
       }
 
-      // 2. Construcción del mensaje de WhatsApp personalizado
+      const timestamp = new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' });
+      
+      const emailPayload = {
+        _replyto: NOTIFICATION_EMAIL,
+        _subject: `⚡ Nuevo Lead en Las Páginas de Dani: ${name}`,
+        nombre_cliente: name,
+        plan_solicitado: selectedPlan,
+        fecha_hora_colombia: timestamp,
+        origen: window.location.href,
+        _captcha: "false"
+      };
+
+      // Envío robusto de correo hacia danicamarillo5215@gmail.com
+      const sendEmailPromise = fetch(`https://formsubmit.co/ajax/${NOTIFICATION_EMAIL}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(emailPayload)
+      }).catch(err => console.log('Email notice:', err));
+
+      // Esperar máximo 800ms para asegurar el despacho de red antes de abrir WhatsApp
+      await Promise.race([
+        sendEmailPromise,
+        new Promise(resolve => setTimeout(resolve, 800))
+      ]);
+
+      // Construcción del mensaje de WhatsApp personalizado
       const waMessage = `👋 ¡Hola Dani! Mi nombre es *${encodeURIComponent(name)}* y estoy interesado en iniciar mi página web con ustedes.%0A%0A` +
         `🚀 *Plan de Interés:* ${encodeURIComponent(selectedPlan)}%0A%0A` +
         `¿Podemos revisar los detalles para comenzar hoy mismo?`;
 
       const waUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${waMessage}`;
 
-      // 3. Reset y cierre
+      // Reset y Cierre
       leadForm.reset();
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+      }
       closeModal();
 
-      // 4. Redirección fluida a WhatsApp
+      // Redirección fluida a WhatsApp
       window.open(waUrl, '_blank', 'noopener,noreferrer');
     });
   }
