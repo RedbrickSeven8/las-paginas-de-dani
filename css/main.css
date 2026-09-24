@@ -51,16 +51,22 @@
   --nav-height: 76px;
 }
 
-/* Reset & Box Sizing */
+/* Reset & Box Sizing - Strict anti-overflow */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
+
 html {
   scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
   font-size: 16px;
 }
 
@@ -69,8 +75,6 @@ body {
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
   line-height: 1.6;
-  overflow-x: hidden;
-  position: relative;
 }
 
 /* Typography Base */
@@ -107,13 +111,21 @@ button, input, select, textarea {
   max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .section {
   padding: 5rem 0;
   position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -165,7 +177,7 @@ button, input, select, textarea {
 }
 
 .section-title {
-  font-size: 2.25rem;
+  font-size: 2rem;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
 }
@@ -177,7 +189,7 @@ button, input, select, textarea {
 }
 
 .section-desc {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.6;
 }
 
@@ -197,6 +209,14 @@ button, input, select, textarea {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, box-shadow;
   user-select: none;
+  text-decoration: none;
+}
+
+.btn-icon-wa {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: currentColor;
 }
 
 .btn-primary {
@@ -224,13 +244,13 @@ button, input, select, textarea {
 }
 
 .btn-secondary {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.08);
   border-color: var(--color-brand-border);
   color: var(--color-text-light);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.15);
   border-color: #FFFFFF;
 }
 
