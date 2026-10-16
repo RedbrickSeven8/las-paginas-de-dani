@@ -27,4 +27,4 @@ jobs:
           SURGE_LOGIN: ${{ secrets.SURGE_MAIL }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
         run: |
-          surge ./ las-paginas-de-dani.surge.sh
+          surge ./las-paginas-de-dani/ las-paginas-de-dani.surge.sh

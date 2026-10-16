@@ -1,0 +1,74 @@
+{
+  "name": "Las Páginas de Dani",
+  "version": "1.0.0",
+  "description": "Estructura de nodos y mapa de arquitectura del sitio web oficial de Las Páginas de Dani",
+  "root": "las-paginas-de-dani",
+  "nodes": [
+    {
+      "id": "root_app",
+      "label": "Las Páginas de Dani (Web App Root)",
+      "path": "las-paginas-de-dani/",
+      "type": "directory",
+      "children": ["index_html", "legal_html", "assets_dir", "css_dir", "js_dir", "cname_file"]
+    },
+    {
+      "id": "index_html",
+      "label": "Página Principal (Landing / Showcase)",
+      "path": "las-paginas-de-dani/index.html",
+      "type": "file",
+      "description": "Estructura semántica completa (Header glassmorphism, Hero, Beneficios, Servicios, Portafolio en vivo con iframes, Proceso 24h, FAQ, Modal WhatsApp)."
+    },
+    {
+      "id": "legal_html",
+      "label": "Tratamiento de Datos Personales (Habeas Data)",
+      "path": "las-paginas-de-dani/tratamiento-de-datos.html",
+      "type": "file",
+      "description": "Documento legal conforme a la Ley 1581 de 2012 de Colombia."
+    },
+    {
+      "id": "cname_file",
+      "label": "Configuración Dominio Surge",
+      "path": "las-paginas-de-dani/CNAME",
+      "type": "file",
+      "description": "Especifica el dominio personalizado para Surge.sh (las-paginas-de-dani.surge.sh)."
+    },
+    {
+      "id": "css_dir",
+      "label": "Estilos CSS Modulares",
+      "path": "las-paginas-de-dani/css/",
+      "type": "directory",
+      "children": ["main_css", "components_css", "animations_css"]
+    },
+    {
+      "id": "main_css",
+      "label": "Estilos Base y Design Tokens",
+      "path": "las-paginas-de-dani/css/main.css",
+      "type": "file"
+    },
+    {
+      "id": "components_css",
+      "label": "Estilos de Componentes",
+      "path": "las-paginas-de-dani/css/components.css",
+      "type": "file"
+    },
+    {
+      "id": "animations_css",
+      "label": "Animaciones Keyframes",
+      "path": "las-paginas-de-dani/css/animations.css",
+      "type": "file"
+    },
+    {
+      "id": "js_dir",
+      "label": "Lógica JavaScript",
+      "path": "las-paginas-de-dani/js/",
+      "type": "directory",
+      "children": ["app_js", "whatsapp_js", "navigation_js", "cookies_js", "animations_js", "pricing_js", "lazy_media_js"]
+    },
+    {
+      "id": "assets_dir",
+      "label": "Recursos Estáticos e Imágenes",
+      "path": "las-paginas-de-dani/assets/",
+      "type": "directory"
+    }
+  ]
+}
